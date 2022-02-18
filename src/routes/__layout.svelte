@@ -19,7 +19,7 @@
 		display: flex;
 		flex-direction: column;
 		padding: 1rem;
-        background-color: #ffdfef;
+        background-color: #fff0f0;
 		width: 100%;
 		margin: 0 auto;
 		box-sizing: border-box;
@@ -34,7 +34,7 @@
         height: 40px;
 		align-items: center;
 		padding: 10px;
-        background-color: #fff0f0;
+        background-color: #ffdfef;
 	}
 
 	footer a {

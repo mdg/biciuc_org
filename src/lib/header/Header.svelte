@@ -27,7 +27,7 @@
 		display: flex;
 		align-items: right;
 		justify-content: space-between;
-        background-color: #fff0f0;
+        background-color: #ffdfef;
 		width: 100%;
 	}
 
