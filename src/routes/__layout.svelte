@@ -3,8 +3,6 @@
 	import '../app.css';
 </script>
 
-<div id="main_column">
-
 <Header />
 
 <main>
@@ -15,8 +13,6 @@
 	<p>visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to learn SvelteKit</p>
 </footer>
 
-</div>
-
 <style>
 	main {
 		flex: 1;
@@ -25,7 +21,6 @@
 		padding: 1rem;
         background-color: #ffdfef;
 		width: 100%;
-		max-width: 1024px;
 		margin: 0 auto;
 		box-sizing: border-box;
 	}
@@ -36,25 +31,19 @@
 		flex-direction: column;
 		justify-content: center;
         width: 100%;
-        max-width: 1024px;
+        height: 40px;
 		align-items: center;
-		padding: 40px;
+		padding: 10px;
+        background-color: #fff0f0;
 	}
 
 	footer a {
 		font-weight: bold;
 	}
 
-    div#main_column {
-        background-color: #f0d0e0;
-		justify-content: center;
-		width: 100%;
-		max-width: 1024px;
-    }
-
 	@media (min-width: 480px) {
 		footer {
-			padding: 40px 0;
+			padding: 10px 0;
 		}
 	}
 </style>

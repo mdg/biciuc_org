@@ -26,9 +26,9 @@
 	header {
 		display: flex;
 		align-items: right;
-		justify-content: center;
+		justify-content: space-between;
+        background-color: #fff0f0;
 		width: 100%;
-		max-width: 1024px;
 	}
 
 	.corner {
