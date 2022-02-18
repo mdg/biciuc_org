@@ -17,5 +17,6 @@
     td {
         width: 50%;
         border: 1px solid black;
+        vertical-align: top;
     }
 </style>
