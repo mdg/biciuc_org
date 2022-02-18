@@ -3,7 +3,7 @@
 </script>
 
 <script lang="ts">
-	import Counter from '$lib/Counter.svelte';
+	// import Counter from '$lib/Counter.svelte';
 </script>
 
 <svelte:head>
@@ -14,19 +14,27 @@
 	<h1>
 		<div class="welcome">
 			<picture>
-				<source srcset="svelte-welcome.webp" type="image/webp" />
-				<img src="svelte-welcome.png" alt="Welcome" />
+				<img src="biciuc_twitter_1500x500.jpg" />
 			</picture>
 		</div>
-
-		to your new<br />SvelteKit app
 	</h1>
 
-	<h2>
-		try editing <strong>src/routes/index.svelte</strong>
-	</h2>
-
-	<Counter />
+    <div class=columns>
+      <span>what</span>
+      <span>which</span>
+      <span>how</span>
+      <span>where</span>
+    </div>
+    <!--
+    <table><tr>
+      <td>
+        what
+      </td>
+      <td>
+        column
+      </td>
+    </tr></table>
+    -->
 </section>
 
 <style>
@@ -41,6 +49,10 @@
 	h1 {
 		width: 100%;
 	}
+
+    div.columns {
+        columns: 100px 3;
+    }
 
 	.welcome {
 		position: relative;
