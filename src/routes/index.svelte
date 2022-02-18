@@ -3,6 +3,7 @@
 </script>
 
 <script lang="ts">
+	import ColumnPair from '$lib/columnpair/ColumnPair.svelte';
 	// import Counter from '$lib/Counter.svelte';
 </script>
 
@@ -19,22 +20,18 @@
 		</div>
 	</h1>
 
-    <div class=columns>
-      <span>what</span>
-      <span>which</span>
-      <span>how</span>
-      <span>where</span>
-    </div>
-    <!--
-    <table><tr>
-      <td>
-        what
-      </td>
-      <td>
-        column
-      </td>
-    </tr></table>
-    -->
+    <ColumnPair>
+      <div slot="left">
+          <div>how</div>
+          <div>where</div>
+          <div>what</div>
+          <div>which</div>
+      </div>
+      <div slot="right">
+          <div>cómo</div>
+          <div>dónde</div>
+      </div>
+    </ColumnPair>
 </section>
 
 <style>
