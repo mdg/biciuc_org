@@ -1,10 +1,10 @@
 <script lang="ts">
-    let src;
+    export let src;
+    export let alt = "";
 </script>
 
-<img src="{src}" />
+<img width="100%" src={src} alt={alt} />
 <slot></slot>
 
 <style>
 </style>
-

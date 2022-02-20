@@ -4,34 +4,38 @@
 
 <script lang="ts">
 	import ColumnPair from '$lib/columnpair/ColumnPair.svelte';
-	// import Counter from '$lib/Counter.svelte';
+	import ImgHeader from '$lib/ImgHeader.svelte';
+	import TextHeader from '$lib/TextHeader.svelte';
 </script>
 
 <svelte:head>
-	<title>Home</title>
+	<title>Bici UC</title>
 </svelte:head>
 
 <section>
-	<h1>
-		<div class="welcome">
-			<picture>
-				<img src="biciuc_twitter_1500x500.jpg" />
-			</picture>
-		</div>
-	</h1>
+    <ImgHeader src={"biciuc_twitter_1500x500.jpg"} >
+        <h1>Bici UC</h1>
 
-    <ColumnPair>
-      <div slot="left">
-          <div>how</div>
-          <div>where</div>
-          <div>what</div>
-          <div>which</div>
-      </div>
-      <div slot="right">
-          <div>cómo</div>
-          <div>dónde</div>
-      </div>
-    </ColumnPair>
+        <ColumnPair>
+          <div slot="left">
+              <TextHeader>
+              Let’s get organized to make cycling safer and more enjoyable
+              for the people of Union City, New jersey
+              </TextHeader>
+              <TextHeader title={"where"}>Where</TextHeader>
+              <TextHeader title={"when"}>When</TextHeader>
+              <TextHeader title={"why"}>Why</TextHeader>
+          </div>
+          <div slot="right">
+              <TextHeader>
+              Organicémonos para hacer que el ciclismo sea más seguro y
+              agradable para la gente de Union City, Nueva Jersey
+              </TextHeader>
+              <div>cómo</div>
+              <div>dónde</div>
+          </div>
+        </ColumnPair>
+    </ImgHeader>
 </section>
 
 <style>
@@ -41,28 +45,5 @@
 		justify-content: center;
 		align-items: center;
 		flex: 1;
-	}
-
-	h1 {
-		width: 100%;
-	}
-
-    div.columns {
-        columns: 100px 3;
-    }
-
-	.welcome {
-		position: relative;
-		width: 100%;
-		height: 0;
-		padding: 0 0 calc(100% * 495 / 2048) 0;
-	}
-
-	.welcome img {
-		position: absolute;
-		width: 100%;
-		height: 100%;
-		top: 0;
-		display: block;
 	}
 </style>
