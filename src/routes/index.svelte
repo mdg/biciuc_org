@@ -3,9 +3,11 @@
 </script>
 
 <script lang="ts">
+    import Lang from '$lib/lang';
 	import ColumnPair from '$lib/columnpair/ColumnPair.svelte';
 	import ImgHeader from '$lib/ImgHeader.svelte';
 	import TextHeader from '$lib/TextHeader.svelte';
+    import * as content from './_content';
 </script>
 
 <svelte:head>
@@ -18,19 +20,13 @@
 
         <ColumnPair>
           <div slot="left">
-              <TextHeader>
-              Let’s get organized to make cycling safer and more enjoyable
-              for the people of Union City, New jersey
-              </TextHeader>
+              <TextHeader>{content.HEADER.text(Lang.EN)}</TextHeader>
               <TextHeader title={"where"}>Where</TextHeader>
               <TextHeader title={"when"}>When</TextHeader>
               <TextHeader title={"why"}>Why</TextHeader>
           </div>
           <div slot="right">
-              <TextHeader>
-              Organicémonos para hacer que el ciclismo sea más seguro y
-              agradable para la gente de Union City, Nueva Jersey
-              </TextHeader>
+              <TextHeader>{content.HEADER.text(Lang.ES)}</TextHeader>
               <div>cómo</div>
               <div>dónde</div>
           </div>
