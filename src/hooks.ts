@@ -19,6 +19,7 @@ export const handle: Handle = async ({ event, resolve }) => {
 			})
 		);
 	}
+    response.headers.set('cache-control', 'max-age=40');
 
 	return response;
 };

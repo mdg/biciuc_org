@@ -3,7 +3,7 @@
 </script>
 
 <script lang="ts">
-    import Lang from '$lib/lang';
+    import { Lang } from '$lib/lang';
 	import ColumnPair from '$lib/columnpair/ColumnPair.svelte';
 	import ImgHeader from '$lib/ImgHeader.svelte';
 	import TextHeader from '$lib/TextHeader.svelte';
