@@ -1,8 +1,19 @@
+alerts:
+- rule: DEPLOYMENT_FAILED
+- rule: DOMAIN_FAILED
 name: biciuc
+region: nyc
 services:
 - environment_slug: node-js
   github:
     branch: main
     deploy_on_push: true
     repo: mdg/biciuc_org
+  http_port: 3000
+  instance_count: 1
+  instance_size_slug: basic-xxs
   name: biciuc
+  routes:
+  - path: /
+  run_command: npm run preview -- --host
+  source_dir: /
