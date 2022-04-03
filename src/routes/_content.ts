@@ -1,5 +1,5 @@
 
-import { BilingualText, BilingualTitleText } from '$lib/bilingual.ts';
+import { BilingualText } from '$lib/bilingual.ts';
 
 export const HEADER = new BilingualText(
     `Let’s get organized to make cycling safer and more enjoyable
