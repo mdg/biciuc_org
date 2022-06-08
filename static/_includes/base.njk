@@ -1,0 +1,59 @@
+<html>
+
+<head>
+<title>{{ title }}</title>
+
+<style>
+.outer-body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 1000px;
+}
+.header-container {
+  display: flex;
+  justify-content: space-around;
+  min-width: 400px;
+  max-width: 1000px;
+}
+.main-container {
+  display: flex;
+  justify-content: space-around;
+  width: 600px;
+  min-width: 400px;
+  max-width: 1000px;
+}
+.title {
+  font-size: 40px;
+}
+.body {
+  background-color: #f0d0f0;
+  width: 1px;
+}
+{% block style %}
+{% endblock %}
+</style>
+
+</head>
+
+<body>
+
+<div class="outer-body">
+
+<header class=header-container>
+  <img src="img/bici-uc-logo-header.png"/>
+  <div class="title">BiciUC</div>
+  <div>&nbsp;</div>
+</header>
+
+&nbsp;
+
+<main class="main-container">
+{% block main %}{% endblock %}
+</main>
+
+</div>
+
+</body>
+
+</html>
