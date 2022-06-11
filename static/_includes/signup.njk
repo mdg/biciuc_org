@@ -10,7 +10,19 @@
 
 <input type=hidden name="lang" value="{{ lang }}" />
 
-<input type="submit" value="{{ submit_text }}" />
+<p>
+{{ label_name }}: <input name="name"/>
+</p>
+
+<p>
+{{ label_email }}: <input name="email"/>
+</p>
+
+<p>
+{{ label_phone }}: <input name="phone"/>
+</p>
+
+<input type="submit" value="{{ text_submit }}" />
 
 </form>
 {% endblock %}
