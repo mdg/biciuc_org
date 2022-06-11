@@ -34,6 +34,9 @@ body {
 .main-container {
   width: 100%;
 }
+div.section {
+  font-size: large;
+}
 div.social-media {
   display: flex;
   justify-content: space-around;
@@ -55,13 +58,23 @@ svg.social-media {
 
 <header class=header-container>
   <div class="logo-container">
-    <img src="img/bici-uc-logo-header.png"/>
+    <img src="/img/bici-uc-logo-header.png"/>
   </div>
   <div>&nbsp;</div>
-  {% if lang=="en" %}
-    <div>Join</div>
-  {% elif lang=="es" %}
-  {% endif %}
+
+  <div>
+    {% if lang=="en" %}
+      <a href="/en/signup/">Join</a>
+      {% set translang = "Español" %}
+    {% elif lang=="es" %}
+      <a href="/es/suscribir/">Suscribir</a>
+      {% set translang = "English" %}
+    {% endif %}
+    {% if translation %}
+      <a href="{{ translation }}">{{ translang }}</a>
+    {% endif %}
+  </div>
+
   <div class="social-media">
     <a href="https://twitter.com/bici_uc" target="_blank"><div dir="auto">
       <svg viewBox="0 0 64 64" class="social-media">
