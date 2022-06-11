@@ -1,29 +1,50 @@
+---
+lang: en
+url:
+  en: /en/signup/
+  es: /es/suscribir/
+text:
+  explanation:
+    en: Sign up for the BiciUC newsletter. We expect to send fewer than 1 email per week.
+    es: Suscribirse al boletin BiciUC. Esperamos mandar menos que 1 email por semana.
+  name:
+    en: Name
+    es: Nombre
+  email:
+    en: Email
+    es: Email
+  phone:
+    en: Phone #
+    es: Telefono
+  submit:
+    en: Submit
+    es: Acceptar
+---
 {% extends 'base.njk' %}
 
 {% block style %}
 {% endblock %}
 
 {% block main %}
-{{ explanation }}
+{{ text.explanation[lang] }}
 
 <form name=subscribe method=POST action="/action/subscribe">
 
 <input type=hidden name="lang" value="{{ lang }}" />
 
 <p>
-{{ label_name }}: <input name="name"/>
+{{ text.name[lang] }}: <input name="name"/>
 </p>
 
 <p>
-{{ label_email }}: <input name="email"/>
+{{ text.email[lang] }}: <input name="email"/>
 </p>
 
 <p>
-{{ label_phone }}: <input name="phone"/>
+{{ text.phone[lang] }}: <input name="phone"/>
 </p>
 
-<input type="submit" value="{{ text_submit }}" />
+<input type="submit" value="{{ text.submit[lang] }}" />
 
 </form>
 {% endblock %}
-

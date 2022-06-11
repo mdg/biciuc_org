@@ -65,13 +65,15 @@ svg.social-media {
   <div>
     {% if lang=="en" %}
       <a href="/en/signup/">Join</a>
-      {% set translang = "Español" %}
+      {% set trans_lang = "Español" %}
+      {% set trans_url = url["es"] %}
     {% elif lang=="es" %}
       <a href="/es/suscribir/">Suscribir</a>
-      {% set translang = "English" %}
+      {% set trans_lang = "English" %}
+      {% set trans_url = url["en"] %}
     {% endif %}
-    {% if translation %}
-      <a href="{{ translation }}">{{ translang }}</a>
+    {% if trans_url %}
+      <a href="{{ trans_url }}">{{ trans_lang }}</a>
     {% endif %}
   </div>
 
