@@ -23,28 +23,64 @@ text:
 {% extends 'base.njk' %}
 
 {% block style %}
+td.signup-label {
+  width: 5em;
+}
+td.signup-field {
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 20px;
+}
+input.signup-field {
+  width: 13em;
+}
 {% endblock %}
 
 {% block main %}
+<p>
 {{ text.explanation[lang] }}
+</p>
 
 <form name=subscribe method=POST action="/action/subscribe">
 
 <input type=hidden name="lang" value="{{ lang }}" />
 
-<p>
-{{ text.name[lang] }}: <input name="name"/>
-</p>
+<table>
 
-<p>
-{{ text.email[lang] }}: <input name="email"/>
-</p>
+<tr>
+<td class="signup-label">
+{{ text.name[lang] }}:
+</td>
+<td class="signup-field">
+<input name="name" class="signup-field"/>
+</td>
+</tr>
 
-<p>
-{{ text.phone[lang] }}: <input name="phone"/>
-</p>
+<tr>
+<td class="signup-label">
+{{ text.email[lang] }}:
+</td>
+<td class="signup-field">
+<input name="email" class="signup-field"/>
+</td>
+</tr>
 
+<tr>
+<td class="signup-label">
+{{ text.phone[lang] }}:
+</td>
+<td class="signup-field">
+<input name="phone" class="signup-field"/>
+</td>
+</tr>
+
+<tr>
+<td colspan=2 align=right>
 <input type="submit" value="{{ text.submit[lang] }}" />
+</td>
+</tr>
+
+</table>
 
 </form>
 {% endblock %}
