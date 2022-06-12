@@ -17,7 +17,7 @@ defmodule BiciWeb.Router do
   scope "/", BiciWeb do
     pipe_through :browser
 
-    get "/", PageController, :index
+    post "/action/subscribe", ActionController, :subscribe
   end
 
   # Other scopes may use custom stacks.
