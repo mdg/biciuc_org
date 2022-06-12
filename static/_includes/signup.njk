@@ -34,9 +34,17 @@ td.signup-field {
 input.signup-field {
   width: 13em;
 }
+
+div.subscribe-row {
+  display: flex;
+}
+
 {% endblock %}
 
 {% block main %}
+
+<div class="subscribe-row">
+<div>
 <p>
 {{ text.explanation[lang] }}
 </p>
@@ -83,4 +91,10 @@ input.signup-field {
 </table>
 
 </form>
+</div>
+
+<img src="/img/central_and_17.jpg"/>
+
+</div>
+
 {% endblock %}

@@ -17,6 +17,11 @@ defmodule BiciWeb.Router do
   scope "/", BiciWeb do
     pipe_through :browser
 
+    # list pages explicitly to avoid sneaky traversal attacks
+    get "/", PageController, :index
+    get "/en/signup", PageController, :index
+    get "/es/suscribir", PageController, :index
+
     post "/action/subscribe", ActionController, :subscribe
   end
 
