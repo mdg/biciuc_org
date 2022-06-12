@@ -8,7 +8,7 @@
 <style>
 body {
   background-color: #f0e0ee;
-  color: #201018;
+  color: #201028;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -20,12 +20,25 @@ body {
   align-items: center;
   min-width: 400px;
   max-width: 1000px;
+  width: 100%;
 }
 .header-container {
   display: flex;
   justify-content: space-between;
   width: 100%;
   padding-top: 5px;
+}
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  background-color: #201028;
+  color: #f0e0ee;
+  width: 100%;
+  padding: 10px;
+  font-size: small;
+}
+.footer-link {
+  color: white;
 }
 .logo-container {
   display: flex;
@@ -36,6 +49,7 @@ body {
 }
 div.section {
   font-size: large;
+  padding: 5px;
 }
 div.social-media {
   display: flex;
@@ -58,7 +72,7 @@ svg.social-media {
 
 <header class=header-container>
   <div class="logo-container">
-    <img src="/img/bici-uc-logo-header.png"/>
+    <a href="/"/><img src="/img/bici-uc-logo-header.png"/></a>
   </div>
   <div>&nbsp;</div>
 
@@ -107,6 +121,11 @@ svg.social-media {
 <main class="main-container">
 {% block main %}{% endblock %}
 </main>
+
+<footer class=footer-container>
+  <div>Copyright 2022 BiciUC</div>
+  <div><a href="mailto:info@biciuc.org" class="footer-link"/>info@biciuc.org</a></div>
+</footer>
 
 </div>
 
