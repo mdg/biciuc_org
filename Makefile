@@ -1,3 +1,8 @@
 
+build-static:
+	npx @11ty/eleventy --input=static --output=bici/priv/static \
+		--formats=njk,css,png,jpg,ico
+
 serve-static:
-	npx @11ty/eleventy --input=static --serve --output=static/_site
+	npx @11ty/eleventy --input=static --output=bici/priv/static \
+		--formats=njk,css,png,jpg,ico --serve
