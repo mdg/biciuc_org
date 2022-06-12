@@ -19,8 +19,12 @@ defmodule BiciWeb.Router do
 
     # list pages explicitly to avoid sneaky traversal attacks
     get "/", PageController, :index
-    get "/en/signup", PageController, :index
-    get "/es/suscribir", PageController, :index
+    get "/en/subscribed", PageController, :index
+    get "/es/suscrito", PageController, :index
+
+    # pages w/ form submission
+    get "/en/signup", PageController, :csrf_index
+    get "/es/suscribir", PageController, :csrf_index
 
     post "/action/subscribe", ActionController, :subscribe
   end

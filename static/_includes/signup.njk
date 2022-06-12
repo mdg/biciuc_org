@@ -1,5 +1,4 @@
 ---
-lang: en
 url:
   en: /en/signup/
   es: /es/suscribir/
@@ -52,6 +51,7 @@ div.subscribe-row {
 <form name=subscribe method=POST action="/action/subscribe">
 
 <input type=hidden name="lang" value="{{ lang }}" />
+<input type=hidden name="_csrf_token" value="get_csrf_token()" />
 
 <table>
 

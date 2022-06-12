@@ -1,0 +1,39 @@
+---
+url:
+  en: /en/subscribed/
+  es: /es/suscrito/
+text:
+  message:
+    en:
+      Thank you for subscribing to the newsletter!
+      Return to the <a href="/">home page</a>.
+    es:
+      ¡Gracias por su suscripción!
+      Regresa a la <a href="/">página inicial</a>.
+---
+{% extends 'base.njk' %}
+
+{% block style %}
+
+div.subscribe-row {
+  display: flex;
+  justify-content: space-between;
+}
+
+{% endblock %}
+
+{% block main %}
+
+<div class="subscribe-row">
+
+<div>
+<p>
+{{ text.message[lang] | safe }}
+</p>
+</div>
+
+<img src="/img/central_and_17.jpg"/>
+
+</div>
+
+{% endblock %}

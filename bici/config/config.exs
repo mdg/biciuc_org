@@ -12,6 +12,7 @@ config :bici, BiciWeb.Endpoint,
   url: [host: "localhost"],
   render_errors: [view: BiciWeb.ErrorView, accepts: ~w(html json), layout: false],
   pubsub_server: Bici.PubSub,
+  sendinblue: System.get_env("SENDINBLUE_KEY"),
   live_view: [signing_salt: "9h9IvfHD"]
 
 # Configures the mailer
