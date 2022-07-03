@@ -33,8 +33,8 @@ if config_env() == :prod do
       You can generate one by calling: mix phx.gen.secret
       """
 
-  host = System.get_env("PHX_HOST") || "example.com"
-  port = String.to_integer(System.get_env("PORT") || "4000")
+  host = System.get_env("PHX_HOST") || "biciuc.org"
+  port = "4000"
 
   config :bici, BiciWeb.Endpoint,
     url: [host: host, port: 443, scheme: "https"],
