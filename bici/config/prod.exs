@@ -45,7 +45,7 @@ config :bici, BiciWeb.Endpoint,
 # We also recommend setting `force_ssl` in your endpoint, ensuring
 # no data is ever sent via http, always redirecting to https:
 #
-config :bici, BiciWeb.Endpoint,
-   force_ssl: [hsts: true]
+# config :bici, BiciWeb.Endpoint,
+#    force_ssl: [hsts: true]
 #
 # Check `Plug.SSL` for all available options in `force_ssl`.
