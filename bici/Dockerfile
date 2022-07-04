@@ -1,4 +1,4 @@
-FROM library/elixir
+FROM library/elixir:slim
 WORKDIR /app
 ENV MIX_ENV=prod
 COPY . .

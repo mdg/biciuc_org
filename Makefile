@@ -8,7 +8,7 @@ serve: build
 container: build
 	docker build --rm -t biciuc bici
 
-container-serve:
+serve-container:
 	# assume container was already built
 	docker run -i -t --name bici-test -p 4000:4000 --rm --env SECRET_KEY_BASE="${SECRET_KEY_BASE}" biciuc
 
