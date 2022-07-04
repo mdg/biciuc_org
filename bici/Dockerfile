@@ -1,9 +1,8 @@
 FROM library/elixir
 WORKDIR /app
+ENV MIX_ENV=prod
 COPY . .
 RUN echo `whoami`
-RUN apt-get --help
-RUN apt search inotify
 RUN mix local.hex --force
 # RUN mix archive.install hex phx_new
 RUN mix compile
